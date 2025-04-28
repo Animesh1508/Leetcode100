@@ -11,7 +11,7 @@ import com.ui.pages.HomePage;
 import com.ui.pages.LoginPage;
 import com.utility.BrowserUtility;
 
-public class LoginTest {
+public class LoginTest3 {
 
 	HomePage homePage;
 	
@@ -24,13 +24,6 @@ public class LoginTest {
 	@Test(description = "Verifies user is able to login with correct creds" , 
 			groups= {"e2e" , "sanity"})
 	public void loginTest() {
-	
-//		LoginPage loginPage = homePage.goToLoginPage();
-//		loginPage.doLoginWith("ak@gmail.com", "pass");
-		
-		//String userName = homePage.goToLoginPage().doLoginWith("hagivod730@astimei.com", "password").getUserName();
-		//Assert.assertEquals(userName, "Animesh k"); //Assert is static class so we can make static import
-		
 		assertEquals(homePage.goToLoginPage().doLoginWith("hagivod730@astimei.com", "password").getUserName(), "Animesh k");
 	}
 }
